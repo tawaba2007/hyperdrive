@@ -1,0 +1,26 @@
+@mixin font-size($size) { 
+    font-size: $size + px;
+    font-size: ($size / 10) * 1rem;
+}
+
+@mixin mobile-s {
+    @media (min-width: ($mobile-s)) {
+        @content;
+    }
+}@mixin mobile {
+    @media (min-width: ($mobile)) {
+        @content;
+    }
+}@mixin tablet {
+    @media (min-width: ($tablet)) {
+        @content;
+    }
+}@mixin laptop {
+    @media (min-width: ($laptop)) {
+        @content;
+    }
+}@mixin laptop-l {
+    @media (min-width: ($laptop-l)) {
+        @content;
+    }
+}
