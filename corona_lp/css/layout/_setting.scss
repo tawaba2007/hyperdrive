@@ -1,0 +1,51 @@
+// COLOR
+$color-pink-light: #fadbd5;
+$color-pink: #fac0b6;
+$color-pink-dark: #f19792;
+
+$color-dark-pink-light: #daa69c;
+$color-dark-pink: #bc5c4b;
+$color-dark-pink-dark: #a1412b;
+
+$color-mint-green-light: #c3dedf;
+$color-mint-green: #92c3c4;
+$color-mint-green-dark: #65baaf;
+
+$color-gray-light: #f3f3f3;
+$color-gray: #cfcfcf;
+$color-gray-dark: #a7a7a7;
+$color-gray-black: #76777a;
+
+$color-white: #ffffff;
+
+// MEDIA QUERIES
+$mobile-s: 350px;
+$mobile: 559px;
+$tablet: 768px;
+$laptop: 840px;
+$laptop-l: 1010px;
+
+// MARGIN PADDING VALUE
+$gutter: 20px;
+
+
+.forSd{
+    display: block; 
+    @include tablet {
+        display: none;
+    }
+}
+
+.forTab {
+    display: none;
+    @include tablet {
+        display: block;
+    }
+}
+
+.forPc {
+    display: none;
+    @include laptop {
+        display: block;
+    }
+}

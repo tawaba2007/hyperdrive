@@ -1,0 +1,21 @@
+@import "../layout/_mixin";
+@import "../layout/_setting";
+
+// レスポンシブの例
+// 基本はスマホファースト
+.hogehoge {
+    width: 100px;
+    // タブレットサイズ以上のレイアウト
+    @include tablet {
+        width: 300px;
+    }
+    // PCサイズ以上のレイアウト
+    @include laptop {
+        width: 300px;
+    }
+}
+
+// font-size の指定方法
+.hogehoge {
+    @include font-size(10);
+}
