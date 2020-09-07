@@ -1,5 +1,5 @@
-@import "../layout/_mixin";
-@import "../layout/_setting";
+@import "layout/_mixin";
+@import "layout/_setting";
 
 // レスポンシブの例
 // 基本はスマホファースト
@@ -18,4 +18,497 @@
 // font-size の指定方法
 .hogehoge {
     @include font-size(10);
+}
+
+.corona {
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+.mainvisial {
+    @include laptop {
+        width: 100%;
+        max-width: 1120px;
+        margin: auto;
+    }
+
+}
+.corona-mainvisial-image {
+    max-width: 100%;
+}
+
+.corona-main {
+    margin: $gutter $gutter 100px;
+    
+    .corona-main-text {
+        margin-bottom: 30px;
+
+        @include laptop {
+            max-width: calc(1120px * 0.8);
+            margin: 77px auto 36px;
+        }
+    }
+}
+
+.corona-contents-button-guide {
+    text-align: center;
+
+    .corona-contents-button-guide-link {
+        display: block;
+        color: $color-pink-dark;
+        background-color: $color-white;
+        border: 1px solid $color-pink-dark;
+        margin: 0 auto;
+        padding: 10px;
+
+        @include tablet {
+            width: 335px;
+            line-height: 43px;
+        }
+    }
+
+    .corona-contents-button-guide-text::after {
+        content: "";
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 7px 0 7px 10px;
+        border-color: transparent transparent transparent $color-pink-dark;
+        display: inline-block;
+        margin-left: 10px;
+        vertical-align: -1.5px;
+    }
+}
+
+.corona-contents-button-guide-text {
+    font-size: 15px;
+    line-height: 1.8;
+    color: $color-pink-dark;
+}
+
+.corona-contents-title {
+    font-family: IvyMode;
+    font-size: 44px;
+    line-height: 2;
+    font-weight: lighter;
+    color: $color-mint-green-dark;
+
+    @include tablet {
+        font-size: 46px;
+    }
+}
+
+.corona-contents-heading {
+    border: 1px solid $color-dark-pink-light;
+    background-color: $color-dark-pink-light;
+    color: $color-white;
+    margin: 0 auto;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.corona-contents-block01, .corona-contents-block02, .corona-contents-block03 {
+    width: 100%;
+    background-color: #f9f9f9 ;
+    text-align: center;
+    padding: 50px $gutter;
+
+    .corona-contents-heading {
+        width: 138px;
+    }
+
+    @include tablet {
+        padding: 50px $gutter $gutter*3;
+    }
+}
+
+.corona-contents-text {
+    text-align: left;
+
+    @include laptop {
+        max-width: calc(1120px * 0.8);
+        margin: 0 auto;
+    }
+}
+
+.corona-contents-box {
+    margin: 50px 0;
+    text-align: left;
+
+    @include tablet {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        flex-flow: row-reverse;
+        margin-bottom: 70px;
+    }
+
+    @include laptop {
+        max-width: calc(1120px * 0.8);
+        margin: 50px auto 70px;
+    }
+
+    .corona-contents-category {
+        width: calc((100% - 20px) /2);
+
+        @include laptop {
+            margin: 0 115px;
+        }
+    }
+}
+
+.corona-contents-item-name {
+    font-size: 18px;
+    font-weight: normal;
+    margin: $gutter 0;
+    text-align: left;
+
+    @include tablet {
+        margin: 0;
+        margin-bottom: 10px;
+        font-size: 20px;
+        display: inline-block;
+        padding-bottom: 10px;
+        border-bottom: 1px solid #000000;            
+
+        br {
+            display: none;
+        }
+    }
+}
+
+.corona-contents-item-text {
+    text-align: left;
+}
+
+.corona-contents-box-flex2 {
+    text-align: left;
+    
+    @include tablet {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        flex-flow: rows;
+        margin-bottom: 70px;
+    }
+
+    @include laptop {
+        max-width: calc(1120px * 0.8);
+        margin: 50px auto 70px;
+    }
+}
+
+.corona-contents {
+
+    @include tablet {
+        width: 40%;
+    }
+}
+
+.corona-contents-item {
+
+    @include tablet {
+        width: 55%;
+    }
+}
+
+.corona-contents-image {
+    width:100%;
+    max-width: 100%;
+    height: auto;
+}
+
+.corona-contents-block02 {
+    margin-top: 50px;
+
+    @include tablet {
+        padding-bottom: $gutter*3;
+    }
+
+    .corona-contents-heading {
+        width: 207px;
+    }
+
+    .corona-contents-button-guide {
+        margin-top: 50px;
+    }
+}
+
+.corona-contents-button {
+
+    @include tablet {
+        margin: 30px 0 50px;
+
+        .corona-contents-button-list-link {
+            margin: 0;
+        }
+    }
+}
+
+.corona-contents-button-list {
+    text-align: center;
+    margin: 0 auto;
+    
+    .corona-contents-button-list-link {
+        display: block;
+        background-color: $color-pink;
+        margin: 0 auto;
+        margin-top: $gutter;
+        position: relative;
+
+        @include tablet {
+            width: 280px;
+            margin: 10px 0;
+            width: 335px;
+        }
+    }
+}
+
+.corona-contents-button-list-text {
+    font-size: 15px;
+    line-height: 43px;
+    color: $color-white;
+}
+
+.corona-contents-button-list-text::after {
+    content: "";
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 8px 0 8px 12px;
+    border-color: transparent transparent transparent $color-white;
+    display: inline-block;
+    margin-left: 10px;
+    vertical-align: -10px;
+    position: absolute;
+    right: 15px;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+}
+
+.corona-contents-block03 {
+    margin-top: 50px;
+
+    .corona-contents-text {
+        text-align: center;
+    }
+
+    .corona-contents-heading {
+        width: 205px;
+    }
+
+    .corona-contents-category {
+        margin-top: 50px;
+
+        @include tablet {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin-top: 30px;
+    
+            .corona-contents-button-list-link {
+                margin: 25px auto;
+            }
+        }
+
+        @include laptop {
+            max-width: calc(1120px * 0.8);
+            margin: 50px auto 70px;
+        }
+    }
+
+    .corona-contents-category-box {
+        margin-bottom: 50px;
+
+        @include tablet {
+            width: 48%;
+            margin: 0;
+            margin-bottom: $gutter*3;
+        }
+        .corona-contents-category-image {
+            width: 100%;
+        }
+    }
+}
+
+.corona-contents-block04 {
+    padding: 50px $gutter;
+    text-align: center;
+
+    @include tablet {
+        .corona-contents-button-list-link {
+            margin: $gutter 0;
+            margin-left: $gutter;
+        }
+    }
+
+    .corona-contents-topic {
+        font-family: IvyMode;
+        font-size: 20px;
+        font-weight: normal;
+        color: $color-pink-dark;
+
+        @include tablet {
+            font-size: 25px;
+        }
+    }
+
+    .corona-contents-topic span {
+        margin: 0 10px;
+
+        @include tablet {
+            font-size: 22px;
+        }
+    }
+
+    .corona-contents-topic-title {
+        background: linear-gradient(transparent 65%, $color-pink-light 150%);
+        color: $color-mint-green-dark;
+        font-size: 26px;
+        font-weight: normal;
+        margin: 0 auto 50px;
+
+        @include tablet {
+            font-size: 38px;
+            width: 485px;
+        }
+    }
+}
+
+.corona-contente-plan {
+    background-color: $color-gray-light;
+    padding: 10px;
+    margin-top: $gutter;
+
+    @include tablet {
+        margin-top: 26px;
+        width: 400px;
+        padding: 30px;
+    }
+
+    @include laptop{
+        width: 527px;
+    }
+
+    .corona-contente-plan-title {
+        font-family: IvyMode;
+        font-size: 20px;
+        font-weight: bold;
+        border-bottom: 1px solid ;
+        text-align: left;
+
+        @include tablet {
+            font-size: 24px;
+        }
+    }
+}
+
+.corona-contents-block04 {
+    .corona-contents-box {
+        .corona-contents-code {
+
+            @include laptop {
+                margin-right: 23px;
+            }
+        }
+    }
+
+    .corona-contents-box-flex2 {
+        .corona-contents-code {
+
+            @include laptop {
+                // margin-left: 23px;
+            }
+        }
+    }
+}
+
+.corona-contents-plan-table {
+    font-size:  10px;
+    margin-bottom: 0;
+
+    @include laptop {
+        font-size: 16px;
+    }
+
+    .corona-contents-plan-th {
+        border: none;
+        font-weight: bold;
+        padding: 0;
+    }
+
+    .corona-contents-plan-td {
+        border: none;
+        padding: 0 0 10px 10px;   
+     }
+}
+
+.corona-contents-price {
+    font-size: 13px;
+    line-height: 1;
+    vertical-align: top;
+    margin-top: 10px;
+
+    @include tablet {
+        margin-left: $gutter;
+    }
+
+    .corona-contents-price-sale {
+        color: #ea6430;
+        font-size: 30px;
+        font-weight: 700;
+
+        @include tablet {
+            font-size: 32px;
+        }
+    }
+
+    .corona-contents-price-sale-off {
+        color: $color-white;
+        border: 1px solid #ea6430;
+        background-color: #ea6430;
+        margin-right: 5px;
+        color: #FFFFFF;
+        vertical-align: text-top;
+
+        @include tablet {
+            margin-left: 15px;
+        }
+    }
+}
+
+.corona-contents-proper {
+    font-size: 18px;
+    text-decoration: line-through;
+    text-align: left;
+
+    @include tablet {
+        font-size: 20px;
+        margin-left: $gutter;
+    }
+}
+
+.corona-contents-block05 {
+    padding: 50px $gutter;
+
+    @include tablet {
+        padding: 50px 70px 0 70px;
+    }
+
+    .corona-contents-text {
+        margin-bottom: $gutter;
+
+        @include tablet {
+            margin-bottom: $gutter*2;
+        }
+    }
+
+    .corona-contents-after {
+        margin-bottom: 50px;
+
+        @include tablet {
+            margin-bottom: $gutter*5;
+        }
+    }
 }
